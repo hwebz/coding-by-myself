@@ -1,0 +1,28 @@
+.fa-star {
+	font-size: 20px;
+	display: inline-block;
+	margin: 10px;
+}
+
+.numbers {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin-top: 50px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	display: inline-block;
+}
+
+.used {
+	pointer-events: none;
+	opacity: 0.7;
+	background-color: #ccc;
+}
