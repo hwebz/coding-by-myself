@@ -6,45 +6,73 @@ import Answer from './Answer.js';
 import Numbers from './Numbers.js';
 
 class Game extends Component {
-
 	state = {
-		selectedNumbers: [],
 		numberOfStars: Math.floor(Math.random() * 9) + 1,
+		selectedNumbers: [],
+		answerIsCorrect: null,
 		usedNumbers: [],
-		answerIsCorrect: null
+		redraws: 5
 	};
 
-	selectNumber = (clickedNumber) => {
-		if (this.state.selectedNumbers.indexOf(clickedNumber) >= 0) return;
+	selectNumber = (number) => {
+		if (this.state.selectedNumbers.indexOf(number) >= 0) return;
+		this.setState({
+			answerIsCorrect: null,
+			selectedNumbers: this.state.selectedNumbers.concat(number)
+		});
+	};
 
-		this.setState(prevState => ({
-			selectedNumbers: prevState.selectedNumbers.concat(clickedNumber)
-		}));
-	}
+	unselectNumber = (number) => {
+		this.setState({
+			answerIsCorrect: null,
+			selectedNumbers: this.state.selectedNumbers.filter(num => num !== number)
+		})
+	};
 
-	unselectNumber = (clickedNumber) => {
-		debugger;
-		console.log(this.state);
-		this.setState(prevState => ({
-			selectedNumbers: prevState.selectedNumbers.filter(number => number !== clickedNumber),
-			answerIsCorrect: null
-		}));
-	}
-	
 	checkAnswer = () => {
-		this.setState(prevState => ({
-			answerIsCorrect: prevState.numberOfStars === prevState.selectedNumbers.reduce((acc, n) => acc + n, 0)
-		}));
-	}
+		this.setState({
+			answerIsCorrect: this.state.numberOfStars === this.state.selectedNumbers.reduce((acc, n) => acc + n, 0)
+		})
+	};
+
+	acceptAnswer = () => {
+		this.setState({
+			usedNumbers: this.state.usedNumbers.concat(this.state.selectedNumbers),
+			selectedNumbers: [],
+			answerIsCorrect: null,
+			numberOfStars: Math.floor(Math.random() * 9) + 1
+		});
+	};
+
+	redraw = () => {
+		if (this.state.redraws === 0) return;
+		this.setState({
+			numberOfStars: Math.floor(Math.random() * 9) + 1,
+			answerIsCorrect: null,
+			selectedNumbers: [],
+			redraws: this.state.redraws - 1,
+			usedNumbers: []
+		})
+	};
 
 	render() {
-		const {selectedNumbers, numberOfStars, answerIsCorrect} = this.state;
+
+		let {numberOfStars, selectedNumbers, answerIsCorrect, usedNumbers, redraws} = this.state;
+
 		return(
-			<div className="row text-center">
+			<div className="row">
 				<Stars numberOfStars={numberOfStars} />
-				<Button selectedNumbers={selectedNumbers} checkAnswer={this.checkAnswer} answerIsCorrect={answerIsCorrect} />
-				<Answer selectedNumbers={selectedNumbers} unselectNumber={this.unselectNumber} />
-				<Numbers selectedNumbers={selectedNumbers} onNumberClicked={this.selectNumber} />
+				<Button selectedNumbers={selectedNumbers} 
+						redraws={redraws}
+						checkAnswer={this.checkAnswer}
+						acceptAnswer={this.acceptAnswer}
+						redraw={this.redraw}
+						answerIsCorrect={answerIsCorrect} />
+				<Answer selectedNumbers={selectedNumbers}
+						unselectNumber={this.unselectNumber} />
+				<Numbers selectedNumbers={selectedNumbers}
+						selectNumber={this.selectNumber}
+						usedNumbers={usedNumbers} />
 			</div>
 		);
 	}
