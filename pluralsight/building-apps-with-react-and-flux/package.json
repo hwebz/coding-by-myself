@@ -1,0 +1,27 @@
+{
+  "name": "building-apps-with-react-and-flux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^8.2.3",
+    "bootstrap": "^4.1.0",
+    "browserify": "^16.2.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-react": "^7.7.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-eslint": "^4.0.2",
+    "gulp-open": "^3.0.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "devDependencies": {
+    "flux": "2.0.3",
+    "react": "0.13.3",
+    "react-router": "0.13.3"
+  }
+}
