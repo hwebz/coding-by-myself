@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^/#/(.*)$ /$1 [L,NC,R]
