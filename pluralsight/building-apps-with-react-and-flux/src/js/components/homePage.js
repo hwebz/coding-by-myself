@@ -17,7 +17,7 @@ var Home = React.createClass({
             <div>
                 <div className="jumbotron">
                     <h3 className="display-4">Management System</h3>
-                    <p className="lead">Some sub-content goes here</p>
+                    <p className="lead">React, React Router, and Flux for ultra-responsive web apps.</p>
                 </div>
             </div>
         );

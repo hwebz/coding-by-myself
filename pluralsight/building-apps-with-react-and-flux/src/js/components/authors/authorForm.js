@@ -1,33 +1,29 @@
 "use strict";
 
 var React = require('react');
+var Input = require('../common/textInput');
 
 var AuthorForm = React.createClass({
+    propTypes: {
+        author: React.PropTypes.object.isRequired,
+        onSave: React.PropTypes.func.isRequired,
+        onChange: React.PropTypes.func.isRequired,
+        errors: React.PropTypes.object
+    },
     render() {
+        var { author } = this.props;
         return(
             <div>
                 <h3>Manage Author</h3>
 
-                <form>
+                <form method="POST">
                     <div className="form-row">
-                        <div className="col-md-6 mb-3">
-                            <label for="#fName">First name</label>
-                            <input type="text" className="form-control is-valid" id="fName" placeholder="Enter first name" required />
-                            <div className="valid-feedback">
-                                Please provide first name.
-                            </div>
-                        </div>
+                        <Input wrapperClass='col-md-6 mb-3' name='firstName' label='First name' placeholder='Enter first name' value={author.firstName} onChange={this.props.onChange} error={this.props.errors}/>
                     </div>
                     <div className="form-row">
-                        <div className="col-md-6 mb-3">
-                            <label for="#lName">Last name</label>
-                            <input type="text" className="form-control is-invalid" id="lName" placeholder="Enter last name" required />
-                            <div className="invalid-feedback">
-                                Please provide last name.
-                            </div>
-                        </div>
+                        <Input wrapperClass='col-md-6 mb-3' name='lastName' label='Last name' placeholder='Enter last name' value={author.lastName} onChange={this.props.onChange} error={this.props.errors}/>
                     </div>
-                    <button type="submit" className="btn btn-primary">Save</button>
+                    <input type="submit" className="btn btn-primary" onClick={this.props.onSave} value="Save" />
                 </form>
             </div>
         );
