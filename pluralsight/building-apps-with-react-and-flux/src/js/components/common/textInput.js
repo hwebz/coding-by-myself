@@ -27,15 +27,16 @@ var Input = React.createClass({
             <div className={this.props.wrapperClass}>
                 <label htmlFor={this.props.name}>{this.props.label}</label>
                 <input type="text" 
-                        className={wrapperClass} 
-                        id={this.props.name}
-                        name={this.props.name}
-                        placeholder={this.props.placeholder}
-                        required 
-                        value={this.props.value}
-                        ref={this.props.name}
-                        onChange={this.props.onChange}
-                        onBlur={this.props.onChange} />
+                    className={wrapperClass} 
+                    id={this.props.name}
+                    name={this.props.name}
+                    placeholder={this.props.placeholder}
+                    required 
+                    value={this.props.value}
+                    ref={this.props.name}
+                    onChange={this.props.onChange}
+                    onBlur={this.props.onChange}
+                />
                 <div className={notificationClass}>
                     {this.props.error[this.props.name][this.props.error[this.props.name].inValidField]}
                 </div>

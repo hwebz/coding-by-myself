@@ -2,6 +2,8 @@
 
 var React = require('react');
 var Link = require('react-router').Link;
+var AuthorActions = require('../../actions/authorActions');
+var toastr = require('toastr');
 
 var AuthorList = React.createClass({
 
@@ -9,13 +11,21 @@ var AuthorList = React.createClass({
         authors: React.PropTypes.array.isRequired
     },
 
+    deleteAuthor(id, event) {
+        debugger;
+        event.preventDefault();
+        AuthorActions.deleteAuthor(id);
+        toastr.success('Author Deleted');
+    },
+
     render() {
-        var createAuthorRow = (author) => {
+        let createAuthorRow = (author) => {
             return(
                 <tr key={author.id}>
                     <td><Link to="authorsDetail" params={{authorId: author.id}}>{author.id}</Link></td>
                     <td>{author.firstName}</td>
                     <td>{author.lastName}</td>
+                    <td><button className="btn btn-danger" onClick={this.deleteAuthor.bind(this, author.id)}>Delete</button></td>
                 </tr>
             );
         };
@@ -27,6 +37,7 @@ var AuthorList = React.createClass({
                         <th scope="col">ID</th>
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
