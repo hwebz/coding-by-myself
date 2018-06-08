@@ -18,7 +18,7 @@ export default function courseReducer(state = initialState.courses, action) {
       return [
         ...state.filter(course => course.id !== action.course.id),
         Object.assign({}, action.course)
-      ]
+      ];
     default:
       return state;
   }

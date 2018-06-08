@@ -1,9 +1,10 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
+import LoadingDots from './LoadingDots';
 
-const Header = () => {
+const Header = ({loading}) => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav className="navbar navbar-expand-md fixed-top">
       <a className="navbar-brand" href="#">Fixed navbar</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +21,7 @@ const Header = () => {
           <li className="nav-item">
             <Link to="courses" className="nav-link" activeClassName="active">Courses</Link>
           </li>
+          {loading && <LoadingDots interval={100} dots={20} />}
         </ul>
       </div>
     </nav>

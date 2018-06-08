@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as courseActions from '../../actions/courseActions';
 import CourseForm from './CourseForm';
-import { browserHistory } from 'react-router';
 
 class ManageCoursePage extends React.Component {
   constructor(props, context) {
@@ -11,11 +10,20 @@ class ManageCoursePage extends React.Component {
 
     this.state = {
       course: Object.assign({}, this.props.course),
-      errors: []
-    }
+      errors: {},
+      saving: false
+    };
 
-    this.updateCourseState = this.updateCourseState.bind(this)
-    this.saveCourse = this.saveCourse.bind(this)
+    this.updateCourseState = this.updateCourseState.bind(this);
+    this.saveCourse = this.saveCourse.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.course.id != nextProps.course.id) {
+      this.setState({
+        course: Object.assign({}, nextProps.course)
+      });
+    }
   }
 
   updateCourseState(event) {
@@ -27,8 +35,14 @@ class ManageCoursePage extends React.Component {
 
   saveCourse(event) {
     event.preventDefault();
-    this.props.actions.saveCourse(this.state.course);
-    browserHistory.push('/courses')
+    this.setState({saving: true});
+    this.props.actions.saveCourse(this.state.course)
+      .then(() => this.redirect());
+  }
+
+  redirect() {
+    this.setState({saving: false});
+    this.context.router.push('/courses');
   }
 
   render() {
@@ -38,19 +52,34 @@ class ManageCoursePage extends React.Component {
         onChange={this.updateCourseState}
         onSave={this.saveCourse}
         errors={this.state.errors}
+        // saving={this.props.loading}
+        saving={this.state.saving}
         authors={this.props.authors}/>
       </div>
     );
   }
 }
 
-ManageCoursePage.PropTypes = {
-  course: PropTypes.object.isRequired,
-  authors: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+ManageCoursePage.contextTypes = {
+  router: PropTypes.object
 };
 
+ManageCoursePage.propTypes = {
+  course: PropTypes.object.isRequired,
+  authors: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired,
+  loading: PropTypes.bool.isRequired
+};
+
+function getCourseById(courses, id) {
+  const course = courses.filter(course => course.id == id);
+  if (course) return course[0];
+  return null;
+}
+
 function mapStateToProps(state, ownProps) {
+  const courseId = ownProps.params.id;
+
   let course = {
     id: '',
     watchHref: '',
@@ -59,6 +88,10 @@ function mapStateToProps(state, ownProps) {
     length: '',
     category: ''
   };
+
+  if (courseId && state.courses.length > 0) {
+    course = getCourseById(state.courses, courseId);
+  }
 
   const authorsFormatted = state.authors.map(author => {
     return {
@@ -69,7 +102,8 @@ function mapStateToProps(state, ownProps) {
 
   return {
     course: course,
-    authors: authorsFormatted
+    authors: authorsFormatted,
+    loading: state.ajaxCallInProgress > 0
   };
 }
 
