@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated route</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=geometry"></script>
+    <script>
+        var map;
+        var lineSymbol = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#393'
+        };
+      
+      var lineSymbol2 = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#f2c'
+        };
+      
+        function initialize() {
+            var markLAT = coords[0].lat;
+            var markLNG = coords[0].lng;
+
+            map = new google.maps.Map(document.getElementById("map"), {
+              center: new google.maps.LatLng(markLAT, markLNG),
+              zoom: 8,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            autoRefresh();
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        var icon = new google.maps.MarkerImage("http://maps.google.com/mapfiles/ms/micons/blue.png");
+
+        function moveMarker(map, marker, lat, lon) {
+            //marker.setPosition(new google.maps.LatLng(lat, lon));
+            //map.panTo(new google.maps.LatLng(lat, lon));
+        }
+
+        function autoRefresh() {
+            var i, route, marker;
+
+            route = new google.maps.Polyline({
+                path: [],
+              icons: [{
+                icon: lineSymbol,
+                offset: '100%'
+              }],
+                geodesic : true,
+                strokeColor: '#FF0000',
+                strokeOpacity: 1.0,
+                strokeWeight: 5,
+                editable: false,
+                map:map
+            });
+
+            marker=new google.maps.Marker({map:map,icon:icon});
+          
+            for (i = 0; i < coords.length; i++) {
+                route.getPath().push(new google.maps.LatLng(coords[i].lat, coords[i].lng));
+            }
+          animateCircle(route);
+          
+          for ( var i = 0; i < route.getPath().getLength(); i++ ) {
+              var marker = new google.maps.Marker( {
+                 title    : route.getPath().getAt( i ),
+                 position : route.getPath().getAt( i ),
+                 map      : map
+              } );
+          }
+          route.setMap( map );
+        }
+      
+      function animateCircle(line) {
+          var count = 0;
+        var animated = window.setInterval(function() {
+            if (count > 198) {
+              window.clearInterval(animated);
+              var icons = line.get('icons');
+              icons[0].offset = '100%';
+              line.set('icons', icons);
+              return;
+            }
+            count = (count + 1) % 200;
+
+            var icons = line.get('icons');
+            icons[0].offset = (count / 2) + '%';
+            line.set('icons', icons);
+          
+        }, 30);
+      }
+
+        var coords = [
+            {
+            "lat": 8.893260000000001,
+            "lng": 76.61427
+            },
+            {
+            "lat": 8.691880000000001,
+            "lng": 77.82178
+            },
+            {
+            "lat": 8.535070000000001,
+            "lng": 76.92738
+            },
+          {
+            "lat": 7.535070000000001,
+            "lng": 75.92738
+            }
+        ];
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+</html>
