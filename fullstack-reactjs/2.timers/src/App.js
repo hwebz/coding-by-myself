@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TimersDashboard from './TimersDashboard.js';
-
 class App extends Component {
   render() {
     return (
