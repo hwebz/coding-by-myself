@@ -25,7 +25,7 @@ Array.prototype.pluck = function(prop) {
     })
 }
 
-var index = 12;
+var index = 0;
 function download() {
   if (index >= links.length) return;
 
