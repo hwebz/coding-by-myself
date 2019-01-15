@@ -7,7 +7,7 @@ var output = '';
 var size = 0;
 var pos = 0;
 
-var instream = fs.createReadStream('./links.txt');
+var instream = fs.createReadStream('./links2.txt');
 var outstream = new stream;
 var rl = readline.createInterface(instream, outstream);
 
@@ -25,7 +25,7 @@ Array.prototype.pluck = function(prop) {
     })
 }
 
-var index = 12;
+var index = 0;
 function download() {
   if (index >= links.length) return;
 
