@@ -27,6 +27,10 @@ lodash@^4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
+moment@^2.23.0:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
+
 node-video-lib@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/node-video-lib/-/node-video-lib-2.1.4.tgz#2829d0ee5f8dd93cdddc6405cb190d6c5d7f28c3"

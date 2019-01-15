@@ -1,0 +1,32 @@
+00:06 Course Introduction
+01:07 Your First Web Page
+11:03 Finding a Proper Code Editor
+18:24 Lists
+31:06 Parent-Child Relationships
+36:30 Heading Tags
+40:17 Blockquotes
+42:58 Anchors
+52:03 Your First Stylesheet
+01:01:55 Clean Project Structures
+01:03:59 Images
+01:08:38 The Necessity of Divs
+01:15:55 IDs and Classes
+01:24:31 An Assignment
+01:26:08 Assignment Solutions
+01:34:50 Floats, and a Simple Layout
+01:48:53 Navigation Lists
+01:55:14 An Introduction to Forms
+02:11:06 Image Replacement
+02:17:42 The Basics of Typography
+02:28:08 The Difference Between Relative and Absolute Positioning
+02:35:52 Reproduce a Website Fragment
+03:06:43 The Importance of Validation
+03:12:24 Zen Coding
+03:19:02 Resets and Normalizing
+03:24:09 CSS Frameworks
+03:42:05 Creating the Markup
+03:53:41 How to Slice a PSD
+04:02:26 How to Create Snippets
+04:06:06 The CSS For Our Website
+04:44:58 Completing the Website
+05:02:30 Conclusion

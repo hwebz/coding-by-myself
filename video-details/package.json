@@ -11,6 +11,7 @@
   "dependencies": {
     "fileinfo": "^1.0.4",
     "fluent-ffmpeg": "^2.1.2",
+    "moment": "^2.23.0",
     "node-video-lib": "^2.1.4"
   }
 }
