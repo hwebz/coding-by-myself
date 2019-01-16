@@ -1,32 +1,78 @@
-00:06 Course Introduction
-01:07 Your First Web Page
-11:03 Finding a Proper Code Editor
-18:24 Lists
-31:06 Parent-Child Relationships
-36:30 Heading Tags
-40:17 Blockquotes
-42:58 Anchors
-52:03 Your First Stylesheet
-01:01:55 Clean Project Structures
-01:03:59 Images
-01:08:38 The Necessity of Divs
-01:15:55 IDs and Classes
-01:24:31 An Assignment
-01:26:08 Assignment Solutions
-01:34:50 Floats, and a Simple Layout
-01:48:53 Navigation Lists
-01:55:14 An Introduction to Forms
-02:11:06 Image Replacement
-02:17:42 The Basics of Typography
-02:28:08 The Difference Between Relative and Absolute Positioning
-02:35:52 Reproduce a Website Fragment
-03:06:43 The Importance of Validation
-03:12:24 Zen Coding
-03:19:02 Resets and Normalizing
-03:24:09 CSS Frameworks
-03:42:05 Creating the Markup
-03:53:41 How to Slice a PSD
-04:02:26 How to Create Snippets
-04:06:06 The CSS For Our Website
-04:44:58 Completing the Website
-05:02:30 Conclusion
+Machine Learning with Python Tutorial | Full Course for Absolute Beginners
+
+Getting Started with Python and Machine Learning
+00:00 01.The Course Overview
+05:03 02.Introduction to Machine Learning
+11:46 03.Installing Software and Setting Up
+
+Exploring the 20 Newsgroups Dataset with Text Analysis Algorithms
+17:50 04.Understanding NLP
+22:01 05.Touring Powerful NLP Libraries in Python
+32:37 06.Getting the Newsgroups Data
+35:55 08.Visualization
+39:11 09.Data Preprocessing
+41:40 07.Thinking about Features
+47:12 10.Clustering
+51:16 11.Topic Modeling
+
+Spam Email Detection with Naïve Bayes
+54:56 12.Getting Started with Classification
+59:59 13.Exploring Naïve Bayes
+01:02:49 14.The Mechanics of Naïve Bayes
+01:07:38 15.The Naïve Bayes Implementation
+01:24:09 16.Classifier Performance Evaluation
+01:34:32 17.Model Tuning and cross-validation
+
+News Topic Classification with Support Vector Machine    
+01:39:43 18.Recap and Inverse Document Frequency
+01:44:09 19.The Mechanics of SVM
+01:50:00 20.The Implementations of SVM
+01:55:45 21.The Kernels of SVM
+01:58:58 22.Choosing Between the Linear and the RBF Kernel
+02:02:50 23.News topic Classification with Support Vector Machine
+02:13:16 24.Fetal State Classification with SVM
+
+Click-Through Prediction with Tree-Based Algorithms
+02:19:16 25.Brief Overview of Advertising Click-Through Prediction
+02:24:02 26.Decision Tree Classifier
+02:37:45 27.The Implementations of Decision Tree
+02:44:03 28.Click-Through Prediction with Decision Tree
+02:50:56 29.Random Forest - Feature Bagging of Decision Tree
+
+Click-Through Prediction with Logistic Regression
+02:56:10 30.One-Hot Encoding - Converting Categorical Features to Numerical
+03:02:10 31.Logistic Regression Classifier
+03:14:19 32.Click-Through Prediction with Logistic Regression by Gradient Descent
+03:35:50 33.Feature Selection via Random Forest
+
+Stock Price Prediction with Regression Algorithms
+03:40:20 34.Brief Overview of the Stock Market And Stock Price
+03:44:09 35.Predicting Stock Price with Regression Algorithms
+03:50:50 36.Data Acquisition and Feature Generation
+03:54:20 37.Linear Regression
+04:02:48 38.Decision Tree Regression
+04:10:25 39.Support Vector Regression
+04:13:22 40.Regression Performance Evaluation
+04:16:50 41.Stock Price Prediction with Regression Algorithms
+
+Best Practices
+04:26:39 42.Best Practices in Data Preparation Stage
+04:37:57 43.Best Practices in the Training Sets Generation Stage
+04:46:43 44.Best Practices in the Model Training, Evaluation, and Selection Stage
+04:50:23 45.Best Practices in the Deployment and Monitoring Stage
+
+Source code: https://drive.google.com/file/d/1WCcuKZ4Z9P5MlkChbCgbYZdnzCv9UVGl/view?usp=sharing
+
+Packt Publishing - Step-by-Step Machine Learning with Python [Video]
+
+Put your Python skills to the test and enter the big world of data science to learn the most effective machine learning tools and techniques with this interesting guide
+
+Video Description
+Data science and machine learning are some of the top buzzwords in the technical world today. The resurging interest in machine learning is due to the same factors that have made data mining and Bayesian analysis more popular than ever. This video is your entry point to machine learning. It starts with an introduction to machine learning and the Python language and shows you how to complete the necessary setup. Moving ahead, you will learn all the important concepts such as exploratory data analysis, data preprocessing, feature extraction, data visualization and clustering, classification, regression, and model performance evaluation. With the help of the various projects included, you will acquire the mechanics of several important machine learning algorithms, which will no longer seem obscure. Also, you will be guided step-by-step to build your own models from scratch. Toward the end, you will gather a broad picture of the machine learning ecosystem and master best practices for applying machine learning techniques. Throughout this course, you will learn to tackle data-driven problems and implement your solutions with the powerful yet simple Python language. Interesting and easy-to-follow examples—including news topic classification, spam email detection, online ad click-through prediction, and stock prices forecasts—will keep you glued to the screen till you reach your goal.
+Data science and machine learning are some of the top buzzwords in the technical world today. The resurging interest in machine learning is due to the same factors that have made data mining and Bayesian analysis more popular than ever. This video is your entry point to machine learning. It starts with an introduction to machine learning and the Python language and shows you how to complete the necessary setup. Moving ahead, you will learn all the important concepts such as exploratory data analysis, data preprocessing, feature extraction, data visualization and clustering, classification, regression, and model performance evaluation. With the help of the various projects included, you will acquire the mechanics of several important machine learning algorithms, which will no longer seem obscure. Also, you will be guided step-by-step to build your own models from scratch. Toward the end, you will gather a broad picture of the machine learning ecosystem and master best practices for applying machine learning techniques. Throughout this course, you will learn to tackle data-driven problems and implement your solutions with the powerful yet simple Python language. Interesting and easy-to-follow examples—including news topic classification, spam email detection, online ad click-through prediction, and stock prices forecasts—will keep you glued to the screen till you reach your goal.
+
+Style and Approach
+This course is an enticing journey that starts from the very basics and gradually picks up pace as the story unfolds. Each concept is first succinctly defined in the larger context of things, followed by a detailed explanation of their application. Every concept is explained with the help of a project that solves a real-world problem and involves hands-on work, giving you a deep insight into the world of machine learning. With this simple yet rich language—Python—you will understand and be able to implement the examples with ease.
+This course is an enticing journey that starts from the very basics and gradually picks up pace as the story unfolds. Each concept is first succinctly defined in the larger context of things, followed by a detailed explanation of their application. Every concept is explained with the help of a project that solves a real-world problem and involves hands-on work, giving you a deep insight into the world of machine learning. With this simple yet rich language—Python—you will understand and be able to implement the examples with ease.
+
+#MachineLearning #Python #DataScience

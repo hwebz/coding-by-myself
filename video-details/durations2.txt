@@ -1,0 +1,45 @@
+00:00 01.The Course Overview
+05:03 02.Introduction to Machine Learning
+11:46 03.Installing Software and Setting Up
+17:50 04.Understanding NLP
+22:01 05.Touring Powerful NLP Libraries in Python
+32:37 06.Getting the Newsgroups Data
+35:55 08.Visualization
+39:11 09.Data Preprocessing
+41:40 07.Thinking about Features
+47:12 10.Clustering
+51:16 11.Topic Modeling
+54:56 12.Getting Started with Classification
+59:59 13.Exploring Naïve Bayes
+01:02:49 14.The Mechanics of Naïve Bayes
+01:07:38 15.The Naïve Bayes Implementation
+01:24:09 16.Classifier Performance Evaluation
+01:34:32 17.Model Tuning and cross-validation
+01:39:43 18.Recap and Inverse Document Frequency
+01:44:09 19.The Mechanics of SVM
+01:50:00 20.The Implementations of SVM
+01:55:45 21.The Kernels of SVM
+01:58:58 22.Choosing Between the Linear and the RBF Kernel
+02:02:50 23.News topic Classification with Support Vector Machine
+02:13:16 24.Fetal State Classification with SVM
+02:19:16 25.Brief Overview of Advertising Click-Through Prediction
+02:24:02 26.Decision Tree Classifier
+02:37:45 27.The Implementations of Decision Tree
+02:44:03 28.Click-Through Prediction with Decision Tree
+02:50:56 29.Random Forest - Feature Bagging of Decision Tree
+02:56:10 30.One-Hot Encoding - Converting Categorical Features to Numerical
+03:02:10 31.Logistic Regression Classifier
+03:14:19 32.Click-Through Prediction with Logistic Regression by Gradient Descent
+03:35:50 33.Feature Selection via Random Forest
+03:40:20 34.Brief Overview of the Stock Market And Stock Price
+03:44:09 35.Predicting Stock Price with Regression Algorithms
+03:50:50 36.Data Acquisition and Feature Generation
+03:54:20 37.Linear Regression
+04:02:48 38.Decision Tree Regression
+04:10:25 39.Support Vector Regression
+04:13:22 40.Regression Performance Evaluation
+04:16:50 41.Stock Price Prediction with Regression Algorithms
+04:26:39 42.Best Practices in Data Preparation Stage
+04:37:57 43.Best Practices in the Training Sets Generation Stage
+04:46:43 44.Best Practices in the Model Training, Evaluation, and Selection Stage
+04:50:23 45.Best Practices in the Deployment and Monitoring Stage
