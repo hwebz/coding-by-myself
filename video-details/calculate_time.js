@@ -1,10 +1,10 @@
-var times = ["00:00", "00:55", "09:50", "07:15", "12:36", "05:18", "03:41", "02:35", "08:59", "09:46", "01:58", "04:33", "07:11", "08:30", "01:31", "08:36", "13:57", "06:15", "15:46", "06:30", "10:20", "07:38", "30:45", "05:35", "06:32", "05:01", "17:50", "11:30", "08:39", "03:34", "38:46", "17:26", "00:39"];
+var times = ["00:00", "17:48", "16:23", "05:15", "19:37", "18:48", "18:16", "17:05", "15:40", "13:52", "19:17", "20:00", "11:25", "10:48", "16:11", "19:55", "15:04", "19:48", "15:51", "12:22", "19:16", "19:07", "19:56", "01:34"];
 var timesConverted = [];
-var titles = ["Course Introduction", "Your First Web Page", "Finding a Proper Code Editor", "Lists", "Parent-Child Relationships", "Heading Tags", "Blockquotes", "Anchors", "Your First Stylesheet", "Clean Project Structures", "Images", "The Necessity of Divs", "IDs and Classes", "An Assignment", "Assignment Solutions", "Floats, and a Simple Layout", "Navigation Lists", "An Introduction to Forms", "Image Replacement", "The Basics of Typography", "The Difference Between Relative and Absolute Positioning", "Reproduce a Website Fragment", "The Importance of Validation", "Zen Coding", "Resets and Normalizing", "CSS Frameworks", "Creating the Markup", "How to Slice a PSD", "How to Create Snippets", "The CSS For Our Website", "Completing the Website", "Conclusion"];
+var titles = ["036 Developing a Neural Network that Plays Pong Part 1", "037 Developing a Neural Network that Plays Pong Part 2", "038 Developing a Neural Network that Plays Pong Part 3", "040 Gathering Training Data from the Player Part 1", "041 Gathering Training Data from the Player Part 2", "042 Training with Player Data Part 1", "044 Training with Player Data Part 2", "045 Training with Player Data Part 3", "046 Reinforcement Learning and Q-Networks", "047 Training a Neural Network with Q-Learning Part 1", "048 Training a Neural Network with Q-Learning Part 2", "049 Training a Neural Network with Q-Learning Part 3", "050 Challenge", "055 An Overview of ML-Agents", "057 Creating an ML-Agent From Scratch Part 1", "058 Creating an ML-Agent From Scratch Part 2", "060 An Avoiding ML-Agent Part 1", "061 An Avoiding ML-Agent Part 2", "063 Top 10 Tips for Neural Network Best Practice", "064 Environment Sensing ML-Agent", "065 Goal Seeking Wall Jumping Part 1", "066 Goal Seeking Wall Jumping Part 2", "068 Thank you"];
 const moment = require('moment');
 
 const fs = require('fs');
-const stream = fs.createWriteStream('durations.txt');
+const stream = fs.createWriteStream('durations-final.txt');
 
 for(var i = 0; i < times.length; i++) {
     var tm = times[i].split(':');

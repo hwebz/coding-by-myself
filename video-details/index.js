@@ -1,7 +1,7 @@
-const testFolder = '../../Done/Packt.Step.by.Step.Machine.Learning.with.Python/';
+const testFolder = '../../Done/Udemy2/';
 const fs = require('fs');
 const VideoLib = require('node-video-lib');
-var stream = fs.createWriteStream('durations2.txt');
+var stream = fs.createWriteStream('durations3.txt');
 var duration = 0;
 
 function durationConverter(duration) {
@@ -25,8 +25,11 @@ stream.once('open', function() {
                     try {
                         let movie = VideoLib.MovieParser.parse(fd);
                         // Work with movie
-                        stream.write(durationConverter(duration) + " " + file.replace('.mp4', '') + '\n');
-                        duration += (movie.relativeDuration())
+                        // stream.write(durationConverter(duration) + " " + file.replace('.mp4', '') + '\n');
+                        // stream.write('"' + durationConverter(duration) + '", ');
+                        stream.write('"' + file.replace('.mp4', '') + '", ');
+                        //duration += (movie.relativeDuration())
+                        duration = (movie.relativeDuration())
                         i++;
                     } catch (ex) {
                         console.error('Error:', ex);

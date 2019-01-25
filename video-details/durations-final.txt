@@ -1,0 +1,55 @@
+Machine Learning with Unity Tutorial Part 2 | Full Course for Absolute Beginners
+
+Part 1 - youtubelink
+
+Source code: https://drive.google.com/drive/folders/1CmMQIqD49mKF3dpF-pkJA83jG9xkdN4O?usp=sharing
+
+Neural Networks in Practice
+00:00 036 Developing a Neural Network that Plays Pong Part 1
+17:48 037 Developing a Neural Network that Plays Pong Part 2
+34:11 038 Developing a Neural Network that Plays Pong Part 3
+039 Challenge (in Source code folder)
+39:26 040 Gathering Training Data from the Player Part 1
+59:03 041 Gathering Training Data from the Player Part 2
+01:17:51 042 Training with Player Data Part 1
+043 A Note to the Astute (in Source code folder)
+01:36:07 044 Training with Player Data Part 2
+01:53:12 045 Training with Player Data Part 3
+
+Reinforcement Learning with the Q-Network
+02:08:52 046 Reinforcement Learning and Q-Networks
+02:22:44 047 Training a Neural Network with Q-Learning Part 1
+02:42:01 048 Training a Neural Network with Q-Learning Part 2
+03:02:01 049 Training a Neural Network with Q-Learning Part 3
+03:13:26 050 Challenge
+051 Extra Readings (in Source code folder)
+
+Unity's ML-Agents V0.2 [DEPRECIATED]
+052 Setting up TensorFlow - Starter Files (in Source code folder)
+053 Setting up TensorFlow - Windows (in Source code folder)
+054 Setting up TensorFlow - Mac (in Source code folder)
+03:24:14 055 An Overview of ML-Agents
+
+Unity's ML-Agents V0.3 [DEPRECATED]
+056 Setup (in Source code folder)
+03:40:25 057 Creating an ML-Agent From Scratch Part 1
+04:00:20 058 Creating an ML-Agent From Scratch Part 2
+059 ML-Agents Cheat Sheet (in Source code folder)
+04:15:24 060 An Avoiding ML-Agent Part 1
+04:35:12 061 An Avoiding ML-Agent Part 2
+062 Challenge (in Source code folder)
+04:51:03 063 Top 10 Tips for Neural Network Best Practice
+05:03:25 064 Environment Sensing ML-Agent
+05:22:41 065 Goal Seeking Wall Jumping Part 1
+05:41:48 066 Goal Seeking Wall Jumping Part 2
+067 Extra Readings (in Source code folder)
+06:01:44 068 Thank you
+
+Udemy - A Beginner's Guide To Machine Learning with Unity
+
+Course Description
+What if you could build a character that could learn while it played?  Think about the types of game play you could develop where the enemies started to outsmart the player. This is what machine learning in games is all about. In this course we will discover the fascinating world of artificial intelligence beyond the simple stuff and examine the increasingly popular domain of machines that learn to think for themselves.
+
+In this course, Penny introduces the popular machine learning techniques of genetic algorithms and neural networks using her internationally acclaimed teaching style and knowledge from a Ph.D in game character AI and over 25 years experience working with games and computer graphics.  In addition she's written two award winning books on games AI and two others best sellers on Unity game development. Through-out the course you will follow along with hands-on workshops designed to teach you about the fundamental machine learning techniques distilling the mathematics in a way that the topic becomes accessible to the most noob of novices.  
+
+#MachineLearning #Unity #ArtificialNeuralNetworks
