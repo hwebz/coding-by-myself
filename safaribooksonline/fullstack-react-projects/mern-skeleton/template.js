@@ -1,4 +1,4 @@
-export default () => {
+export default ({markup, css}) => {
     return `
         <!doctype html>
         <html>
@@ -8,9 +8,15 @@ export default () => {
                 <link rel='shortcut icon' type='image/x-icon' href='/dist/favicon.ico' />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+                <style>
+                    a{
+                        text-decoration: none
+                    }
+                </style>
             </head>
             <body>
-                <div id="root"></div>
+                <div id="root">${markup}</div>
+                <style id="jss-server-side">${css}</style>
                 <script type="text/javascript" src="/dist/bundle.js"></script>
             </body>
         </html>

@@ -1,4 +1,6 @@
-export default window.helpers = (function () {
+const uuid = require('uuid')
+
+const helpers = (function () {
     function newTimer(attrs = {}) {
       const timer = {
         title: attrs.title || 'Timer',
@@ -53,4 +55,6 @@ export default window.helpers = (function () {
       findById,
       renderElapsedString,
     };
-  }());
+}());
+
+export default helpers
