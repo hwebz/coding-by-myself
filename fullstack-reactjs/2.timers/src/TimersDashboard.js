@@ -58,6 +58,8 @@ class TimersDashboard extends Component {
         this.setState({
             timers: this.state.timers.concat(t)
         })
+
+        client.createTimer(t)
     }
 
     updateTimer = attrs => {
@@ -72,6 +74,8 @@ class TimersDashboard extends Component {
                 return timer
             })
         })
+
+        client.updateTimer(attrs)
     }
 
     handleTrashClick(timerId) {
@@ -81,6 +85,10 @@ class TimersDashboard extends Component {
     deleteTimer(timerId) {
         this.setState({
             timers: this.state.timers.filter(t => t.id !== timerId)
+        })
+
+        client.deleteTimer({
+            id: timerId
         })
     }
     
@@ -95,35 +103,45 @@ class TimersDashboard extends Component {
     startTimer(timerId) {
         const now = Date.now()
 
-        this.setState({
-            timers: this.state.timers.map(timer => {
-                if (timer.id === timerId) {
-                    return Object.assign({}, timer, {
-                        runningSince: now,
-                    })
-                } else {
-                    return timer
-                }
-            })
-        })
+        // this.setState({
+        //     timers: this.state.timers.map(timer => {
+        //         if (timer.id === timerId) {
+        //             return Object.assign({}, timer, {
+        //                 runningSince: now,
+        //             })
+        //         } else {
+        //             return timer
+        //         }
+        //     })
+        // })
+
+        client.startTimer({
+            id: timerId,
+            start: now
+        }).then(this.loadTimersFromServer)
     }
 
     stopTimer(timerId) {
         const now = Date.now()
 
-        this.setState({
-            timers: this.state.timers.map(timer => {
-                if (timer.id === timerId) {
-                    const lastElapsed = now - timer.runningSince
-                    return Object.assign({}, timer, {
-                        elapsed: timer.elapsed + lastElapsed,
-                        runningSince: null
-                    })
-                } else {
-                    return timer
-                }
-            })
-        })
+        // this.setState({
+        //     timers: this.state.timers.map(timer => {
+        //         if (timer.id === timerId) {
+        //             const lastElapsed = now - timer.runningSince
+        //             return Object.assign({}, timer, {
+        //                 elapsed: timer.elapsed + lastElapsed,
+        //                 runningSince: null
+        //             })
+        //         } else {
+        //             return timer
+        //         }
+        //     })
+        // })
+
+        client.stopTimer({
+            id: timerId,
+            stop: now
+        }).then(this.loadTimersFromServer)
     }
 
     render() {

@@ -15,7 +15,7 @@ const client = (function () {
   
     function createTimer(data) {
       return fetch(BASE_URL + '/api/timers', {
-        method: 'post',
+        method: 'POST',
         body: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',
@@ -26,7 +26,7 @@ const client = (function () {
   
     function updateTimer(data) {
       return fetch(BASE_URL + '/api/timers', {
-        method: 'put',
+        method: 'PUT',
         body: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',
@@ -37,7 +37,7 @@ const client = (function () {
   
     function deleteTimer(data) {
       return fetch(BASE_URL + '/api/timers', {
-        method: 'delete',
+        method: 'DELETE',
         body: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',
@@ -48,7 +48,7 @@ const client = (function () {
   
     function startTimer(data) {
       return fetch(BASE_URL + '/api/timers/start', {
-        method: 'post',
+        method: 'POST',
         body: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',
@@ -59,7 +59,7 @@ const client = (function () {
   
     function stopTimer(data) {
       return fetch(BASE_URL + '/api/timers/stop', {
-        method: 'post',
+        method: 'POST',
         body: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',

@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Headers', '*')
+    res.setHeader('Access-Control-Allow-Methods', '*')
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
     res.setHeader('Pragma', 'no-cache')
     res.setHeader('Expires', '0')
@@ -94,14 +96,15 @@ app.put('/api/timers', (req, res) => {
 app.delete('/api/timers', (req, res) => {
     fs.readFile(DATA_FILE, (err, data) => {
         let timers = JSON.parse(data)
-        timers = timers.reduce((memo, timer) => {
-            if (timer.id === req.body.id) return memo
-            return memo.concat(timer)
+        timers = timers.filter(timer => {
+            return timer.id !== req.body.id
         })
-    }, [])
-    fs.writeFile(DATA_FILE, JSON.stringify(timers, null, 4), () => {
-        res.json({})
+
+        fs.writeFile(DATA_FILE, JSON.stringify(timers, null, 4), () => {
+            res.json({})
+        })
     })
+    
 })
 
 app.get('/molasses', (_, res) => {
