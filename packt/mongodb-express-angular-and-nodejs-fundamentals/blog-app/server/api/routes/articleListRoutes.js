@@ -1,0 +1,1 @@
+const ArticleController = require('../controllers/articleController');
